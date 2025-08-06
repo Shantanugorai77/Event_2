@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    
+    <h1>Code with Me </h1>
+    <button id="cancel">EXIT</button>
+
+    <script>
+        console.log("hello");
+
+        const myName = function() {
+            console.log("Shantanu");
+        }
+        setTimeout(myName, 200);
+
+        const changeText = function() {
+            document.querySelector('h1').innerHTML = "Best JavaScript Series";
+            console.log("Best JavaScript Series");
+        }
+
+        // Store the timeout ID so we can cancel it later
+        const changeTextTimeout = setTimeout(changeText, 3000);
+
+        // Correct spelling and cancel using the ID
+        document.querySelector('#cancel').addEventListener('click', function() {
+            clearTimeout(changeTextTimeout);
+            console.log("EXIT");
+        });
+    </script>
+</body>
+</html>
